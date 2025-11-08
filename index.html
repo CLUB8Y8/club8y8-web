@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB 8&8 - Tu Ritual de Mañana y Noche</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Chivo+Mono:wght@900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .logo-font { font-family: 'Chivo Mono', monospace; }
+        .success-message { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navegación -->
+    <nav class="w-full py-5 px-6 md:px-12 flex justify-between items-center bg-white sticky top-0 z-50 border-b border-gray-100">
+        <div class="flex items-center">
+            <span class="text-3xl md:text-4xl font-black tracking-tighter logo-font">
+                CLUB <span class="text-blue-600">8</span>&<span class="text-yellow-500">8</span>
+            </span>
+        </div>
+        <a href="#unete" class="hidden sm:inline-block bg-black text-white font-bold py-3 px-6 rounded-full hover:bg-gray-800 transition-all">
+            Entrar a la Lista
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-20 md:py-32 px-6 text-center bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+                Domina tu día a las <span class="text-yellow-500">8 AM</span>.<br>
+                Recupéralo a las <span class="text-blue-600">8 PM</span>.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                El primer club de suscripción diseñado para tus dos momentos clave.
+                Café de especialidad para arrancar. Cerveza artesanal para desconectar.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#unete" class="bg-black text-white font-bold text-lg py-4 px-10 rounded-full hover:scale-105 transition-transform">
+                    Ver los Kits
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="unete" class="py-24 px-6 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Elige tu Ritual</h2>
+                <p class="text-xl text-gray-600">Suscríbete a uno o domina ambos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
+                
+                <!-- Tarjeta 8 AM (Café) -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl transition-all hover:shadow-2xl">
+                    <div class="relative h-72">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Café de especialidad" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6 bg-yellow-500 text-black font-black text-xl px-4 py-2 rounded-lg logo-font transform -rotate-2">
+                            8:00 AM
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-10">
+                        <h3 class="text-3xl font-bold mb-4">El Kit "Impulso"</h3>
+                        <p class="text-gray-600 text-lg mb-8">Tu combustible limpio para mañanas productivas. Energía real, sin bajones de azúcar.</p>
+                        <ul class="space-y-4 mb-8 bg-yellow-50 p-6 rounded-2xl">
+                            <li class="flex items-center font-medium"><i data-lucide="coffee" class="w-6 h-6 text-yellow-600 mr-3"></i> Café de Especialidad (Grano/Molido)</li>
+                            <li class="flex items-center font-medium"><i data-lucide="zap" class="w-6 h-6 text-yellow-600 mr-3"></i> Barras Energéticas Naturales</li>
+                            <li class="flex items-center font-medium"><i data-lucide="nut" class="w-6 h-6 text-yellow-600 mr-3"></i> Mix de Frutos Secos y Superfoods</li>
+                        </ul>
+                        <div id="success-8am" class="success-message bg-green-100 text-green-800 p-4 rounded-xl text-center font-bold mb-6">¡Estás en la lista de las 8 AM! ☀️</div>
+                        <form id="form-8am" class="space-y-4">
+                            <input type="email" placeholder="Tu correo electrónico" required class="w-full px-6 py-4 bg-gray-100 border-2 border-transparent rounded-xl focus:border-yellow-500 outline-none">
+                            <button type="submit" class="w-full bg-black text-white font-bold text-lg py-4 rounded-xl hover:bg-gray-800 transition-colors">Avisarme</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 8 PM (Cerveza) -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl transition-all hover:shadow-2xl">
+                    <div class="relative h-72">
+                        <img src="https://images.unsplash.com/photo-1566633806327-68e152aaf26d?w=800&q=80" alt="Cerveza artesanal oscura" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white font-black text-xl px-4 py-2 rounded-lg logo-font transform rotate-2">
+                            8:00 PM
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-10">
+                        <h3 class="text-3xl font-bold mb-4">El Kit "Recompensa"</h3>
+                        <p class="text-gray-600 text-lg mb-8">Tu premio merecido al final del día. Sabores complejos para disfrutar despacio y desconectar.</p>
+                        <ul class="space-y-4 mb-8 bg-blue-50 p-6 rounded-2xl">
+                            <li class="flex items-center font-medium"><i data-lucide="beer" class="w-6 h-6 text-blue-600 mr-3"></i> Cervezas Artesanales Premium</li>
+                            <li class="flex items-center font-medium"><i data-lucide="cookie" class="w-6 h-6 text-blue-600 mr-3"></i> Chocolates Gourmet y Dulces</li>
+                            <li class="flex items-center font-medium"><i data-lucide="popcorn" class="w-6 h-6 text-blue-600 mr-3"></i> Botanas Saladas (Pretzels, Carnes)</li>
+                        </ul>
+                        <div id="success-8pm" class="success-message bg-green-100 text-green-800 p-4 rounded-xl text-center font-bold mb-6">¡Estás en la lista de las 8 PM! 🌙</div>
+                        <form id="form-8pm" class="space-y-4">
+                            <input type="email" placeholder="Tu correo electrónico" required class="w-full px-6 py-4 bg-gray-100 border-2 border-transparent rounded-xl focus:border-blue-600 outline-none">
+                            <button type="submit" class="w-full bg-black text-white font-bold text-lg py-4 rounded-xl hover:bg-gray-800 transition-colors">Avisarme</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 text-center px-6">
+        <span class="text-3xl font-black tracking-tighter logo-font block mb-4">CLUB 8&8</span>
+        <p class="text-gray-500">© 2025 Club 8&8. Hecho para los que no paran.</p>
+    </footer>
+
+    <!-- Iconos Lucide (Cargados al final para evitar errores) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+        function setupForm(formId, successId) {
+            const form = document.getElementById(formId);
+            const success = document.getElementById(successId);
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                form.style.display = 'none';
+                success.style.display = 'block';
+                setTimeout(() => success.style.opacity = 1, 10);
+            });
+        }
+        setupForm('form-8am', 'success-8am');
+        setupForm('form-8pm', 'success-8pm');
+    </script>
+</body>
+</html>
